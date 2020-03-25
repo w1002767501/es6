@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<script>
+    // 箭头函数
+    let arr = [1,21,31,24,15,106]
+    arr.sort((n1, n2)=>{
+        return n1-n2
+    })
+    arr.sort((n1, n2)=>{
+        return n1-n2
+    })
+    console.log(arr)
+    // 如果只有一个参数，( )可以省
+    // 如果只有一个return，{ }可以省
+
+    // 1.	收集剩余的参数
+    function show(a,b, ...arrs){
+        console.log(a,b,...arrs)
+    }
+    show(1,2,3,4,5,6)
+
+    // 2.	展开数组
+    let arr3 = [1,2,3]
+    
+    function show2(a,b,c){
+        console.log(a,b,c)
+    }
+    show2(arr3)
+    show2(...arr3)
+
+    // 默认参数
+    function show4(a, b=1, c=2) {
+        console.log(a, b, c)
+    }
+    show4(1,22,33)
+</script>
+<body>
+    
+</body>
+</html>
